@@ -1,0 +1,38 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %} 
+{% load static %}
+<form action="{% url 'editar_usuario' usuario.id_usuario %}" method="post">
+    <div class="container">
+        <h1>Dados Pessoais</h1>
+          {% csrf_token %}
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" value="{{usuario.nome}}">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" {% if erro_email %} class="error_email" role="alert" {% endif %} name="email" value="{{usuario.email}}">
+
+            <label for="telefone">Telefone</label>
+            <input type="text" name="telefone" value="{{usuario.telefone}}">           
+
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" value="{{usuario.cep}}" size="10" maxlength="9" onblur="pesquisacep(this.value);">
+
+            <label for="rua">Rua</label>
+            <input type="text" name="rua" id="rua" value="{{usuario.rua}}">
+            
+            <label for="bairro">Bairro</label>
+            <input type="text" name="bairro" id="bairro" value="{{usuario.bairro}}">
+
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade" id="cidade" value="{{usuario.cidade}}">
+
+            <label for="uf">UF</label>
+            <input type="text" name="uf" id="uf" value="{{usuario.uf}}">
+
+            <label for="numero">Numero</label>
+            <input type="text" name="numero" value="{{usuario.numero}}">
+
+            <button class="botao" type="submit">Salvar</button>
+    </div>
+</form>
+  {% endblock %}

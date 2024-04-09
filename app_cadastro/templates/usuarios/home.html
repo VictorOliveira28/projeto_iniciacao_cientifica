@@ -1,0 +1,39 @@
+  {% extends 'usuarios/base.html' %}
+  {% block conteudo %}
+  {% load static %}
+  <form id="meu-formulario" action="{%url 'lista_usuarios' %}" method="post">
+    <div class="container">
+        <h1>Dados Pessoais</h1>
+          {% csrf_token %}
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" {% if aviso %}class="error"{% endif %} placeholder="contato@email.com" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="text" name="telefone" placeholder="(21)99999-9999" required>           
+
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="00.000-000" required>
+
+            <label for="rua">Rua</label>
+            <input type="text" name="rua" id="rua" required>
+            
+            <label for="bairro">Bairro</label>
+            <input type="text" name="bairro" id="bairro" required>
+
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade" id="cidade" required>
+
+            <label for="uf">UF</label>
+            <input type="text" name="uf" id="uf" placeholder="RJ" required>
+
+            <label for="numero">Numero</label>
+            <input type="text" name="numero" required>
+
+            <button class="botao">Cadastrar</button>
+    </div>
+    
+  </form>
+  {% endblock %}

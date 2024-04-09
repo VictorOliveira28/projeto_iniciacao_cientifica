@@ -1,0 +1,55 @@
+.container{    
+    display: grid;
+    grid-template-columns: 1fr; 
+    padding: 20px;
+    margin-left: 4px;        
+}
+
+.container form{      
+    align-items: center; 
+    margin-left: 4px;   
+    width: 500px;
+    border: none;
+    padding-bottom: 60px;
+}
+
+.error{
+    border: 3px solid red;    
+}
+
+.error_email{
+    border: 3px solid red;    
+}
+
+.container label{
+    text-transform: uppercase;
+    width: max-content;    
+}
+
+.container input, 
+.botao{
+    width: 500px;
+}
+
+.container select{
+    width: max-content;
+}
+
+.botao{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 16px;
+    margin-top: 20px;     
+    cursor: pointer; 
+    border-radius: 4px;   
+    width: 500px;   
+}
+
+.botao:hover{
+    background-color: #1f7024;
+}

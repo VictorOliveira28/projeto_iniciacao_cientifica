@@ -1,0 +1,54 @@
+.container {    
+    padding-top: 15px;
+    max-width: 100%;
+    margin: 0px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #ddd;    
+}
+
+th, td {   
+    padding: 10px;
+    text-align: center;    
+    border: 1px solid #ddd;    
+}
+
+tr{    
+    align-items: center;
+}
+
+th {
+    background-color: #f2f2f2;    
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+td:first-child,
+th:first-child {
+    border-left: none;
+}
+
+td:last-child,
+th:last-child {
+    border-right: none;
+}
+
+.deletar img,
+.editar img {
+    width: 24px; 
+    height: 24px; 
+    margin-right: 5px;       
+}
+
+.botao{
+    width: 500px;
+}
